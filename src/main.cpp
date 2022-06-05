@@ -13,7 +13,7 @@
 #include "hid_l2cap.h"
 
 #define ENABLE_IR
-#define ENABLE_HTTP
+//#define ENABLE_HTTP
 
 #define TARGET_BT_ADDR  { 0x00, 0x01, 0x02, 0x03, 0x04, 0x05 } // HIDデバイスのBTのMacアドレス
 
