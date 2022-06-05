@@ -9,12 +9,6 @@
 #include <WiFi.h>
 #include <WiFiUdp.h>
 #include <ArduinoJson.h>
-#include <HTTPClient.h>
-
-#include <IRsend.h>
-#include <IRrecv.h>
-#include <IRremoteESP8266.h>
-#include <IRutils.h>
 
 #include "hid_l2cap.h"
 
@@ -30,6 +24,11 @@
 #define UDP_SEND_PORT 1401
 
 #ifdef ENABLE_IR
+#include <IRsend.h>
+#include <IRrecv.h>
+#include <IRremoteESP8266.h>
+#include <IRutils.h>
+
 #define UDP_RECV_PORT 1402
 #if defined(ARDUINO_M5Stick_C)
 #define IR_SEND_PORT 32
@@ -45,6 +44,7 @@ static decode_results results;
 #endif
 
 #ifdef ENABLE_HTTP
+#include <HTTPClient.h>
 #define BASE_URL  "【HTTP Get呼び出し先】"
 #endif
 
