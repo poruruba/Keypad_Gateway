@@ -15,7 +15,6 @@ extern "C"{
 static long hid_l2cap_init_service( const char *name, uint16_t psm, uint8_t security_id);
 static void hid_l2cap_deinit_service( const char *name, uint16_t psm );
 
-static void hid_l2cap_connect_ind_cback (BD_ADDR  bd_addr, uint16_t l2cap_cid, uint16_t psm, uint8_t l2cap_id);
 static void hid_l2cap_connect_cfm_cback (uint16_t l2cap_cid, uint16_t result);
 static void hid_l2cap_config_ind_cback (uint16_t l2cap_cid, tL2CAP_CFG_INFO *p_cfg);
 static void hid_l2cap_config_cfm_cback (uint16_t l2cap_cid, tL2CAP_CFG_INFO *p_cfg);
